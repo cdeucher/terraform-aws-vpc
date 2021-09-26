@@ -28,9 +28,6 @@ resource "aws_spot_instance_request" "webserver_public" {
       var.security_group
   ]  
 }
-output "base_ip" {
-    value = aws_spot_instance_request.webserver_public.public_ip
-}
  
 resource "aws_spot_instance_request" "webserver_private" {
   ami           = var.ami
